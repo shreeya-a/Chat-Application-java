@@ -1,12 +1,10 @@
-import javax.swing.*;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server {
     public static void main(String[] args) throws IOException {
-        GUI gui = new GUI();
-        gui.guiRender();
+
         ServerSocket serverSocket = new ServerSocket(12345);
        Socket socket= serverSocket.accept();
         BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
